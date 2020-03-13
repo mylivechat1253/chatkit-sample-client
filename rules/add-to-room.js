@@ -5,12 +5,17 @@
       return callback(null, user, context);
     }
     
-    const CHATKIT_INSTANCE_ID = configuration.chatkitInstanceLocator.split(':')[2];
-    const CHATKIT_KEY_ID = configuration.chatkitSecret.split(':')[0]; 
-    const CHATKIT_KEY_SECRET = configuration.chatkitSecret.split(':')[1];
-    const CHATKIT_API_BASE = 'https://us1.pusherplatform.io/services/chatkit/v2';
-    const ADD_USERS_TO_ROOM_ENDPOINT = `${CHATKIT_API_BASE}/${CHATKIT_INSTANCE_ID}/rooms/${configuration.chatkitRoomId}/users/add`;
-  
+    //const CHATKIT_INSTANCE_ID = configuration.chatkitInstanceLocator.split(':')[2];
+    //const CHATKIT_KEY_ID = configuration.chatkitSecret.split(':')[0]; 
+    //const CHATKIT_KEY_SECRET = configuration.chatkitSecret.split(':')[1];
+    //const CHATKIT_API_BASE = 'https://us1.pusherplatform.io/services/chatkit/v2';
+    //const ADD_USERS_TO_ROOM_ENDPOINT = `${CHATKIT_API_BASE}/${CHATKIT_INSTANCE_ID}/rooms/${configuration.chatkitRoomId}/users/add`;
+  const CHATKIT_INSTANCE_ID = 'd34fed07-c293-4ede-8fa1-e726951533a9';
+  const CHATKIT_KEY_ID = '41438ca0-8296-43e9-9cca-38836e1b98be'; 
+  const CHATKIT_KEY_SECRET = 'pu7MOMNFIYGNmd1h3Q1y1TN1QMq2O0ZyfuL9/5P8VwY=';
+  const CHATKIT_API_BASE = `https://us1.pusherplatform.io/services/chatkit_token_provider/v1`;
+  const ADD_USERS_TO_ROOM_ENDPOINT = `${CHATKIT_API_BASE}/${CHATKIT_INSTANCE_ID}/rooms/${configuration.chatkitRoomId}/users/add`;
+   
     const request = require('request');
     const jwt = require('jsonwebtoken');
     
